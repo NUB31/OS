@@ -2,6 +2,10 @@
 USER_HOME=$(eval echo ~${SUDO_USER})
 cd ${USER_HOME}
 
+mkdir .config/awesome
+touch .config/awesome/rc.lua
+cat OS/rc.lua > .config/awesome/rc.lua
+
 sudo apt update
 sudo apt upgrade
 
