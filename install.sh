@@ -7,12 +7,12 @@ sudo apt-get install -y awesome neofetch konsole firefox zsh dolphin nitrogen co
 chsh -s /bin/zsh
 
 touch .xinitrc
-echo "exec awesome" > .xinitrc
+echo "exec awesome" > ~/.xinitrc
 
 touch .zprofile
-echo "startx" > .zprofile
+echo "startx" > ~/.zprofile
 
 mkdir  ~/.config/awsome
 
 touch rc.lua
-cat /etc/xdg/awesome/rc.lua > rc.lua
+cat /etc/xdg/awesome/rc.lua > ~/rc.lua
