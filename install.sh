@@ -1,6 +1,6 @@
 #!/bin/sh
-sudo apt update
-sudo apt upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 sudo apt-get install -y awesome neofetch konsole firefox zsh dolphin nitrogen compton breeze-icon-theme lxinput neovim terminator xorg
 
