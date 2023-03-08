@@ -19,6 +19,7 @@ make install installsystemd
 systemctl enable ly.service
 
 cd ../
+sudo rm -r ly
 
 # Create startup config
 touch .xinitrc
