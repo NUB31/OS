@@ -2,7 +2,7 @@
 sudo apt update
 sudo apt upgrade
 
-sudo apt-get install -y awesome terminator build-essential libpam0g-dev libxcb-xkb-dev zsh
+sudo apt-get install -y awesome terminator build-essential libpam0g-dev libxcb-xkb-dev zsh xorg
 
 git clone https://github.com/fairyglade/ly --recurse-submodules
 
