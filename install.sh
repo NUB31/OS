@@ -1,14 +1,18 @@
 #!/bin/sh
-mkdir .config/awesome
-touch .config/awesome/rc.lua
-cat OS/rc.lua > .config/awesome/rc.lua
-
 sudo apt update
 sudo apt upgrade
 
-sudo apt-get install awesome neofetch konsole firefox zsh dolphin nitrogen compton breeze-icon-theme lxinput neovim terminator xorg LightDM
+sudo apt-get install -y awesome terminator build-essential libpam0g-dev libxcb-xkb-dev zsh
 
-chsh -s /bin/zsh
+git clone https://github.com/fairyglade/ly --recurse-submodules
+
+cd ly
+make
+make install installsystemd
+
+systemctl enable ly.service
+
+cd ../
 
 touch .xinitrc
 echo "exec awesome" > .xinitrc
@@ -16,7 +20,12 @@ echo "exec awesome" > .xinitrc
 touch .zprofile
 echo "startx" > .zprofile
 
-mkdir  .config/awsome
+mkdir .config
+mkdir .config/awesome
 
-touch rc.lua
-cat /etc/xdg/awesome/rc.lua > rc.lua
+touch .config/awesome/rc.lua
+cat os/rc.lua > .config/awesome/rc.lua
+
+chsh -s /etc/zsh
+
+reboot
