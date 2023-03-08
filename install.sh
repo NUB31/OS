@@ -1,7 +1,4 @@
 #!/bin/sh
-USER_HOME=$(eval echo ~${SUDO_USER})
-cd ${USER_HOME}
-
 mkdir .config/awesome
 touch .config/awesome/rc.lua
 cat OS/rc.lua > .config/awesome/rc.lua
@@ -9,7 +6,7 @@ cat OS/rc.lua > .config/awesome/rc.lua
 sudo apt update
 sudo apt upgrade
 
-sudo apt-get install -y awesome neofetch konsole firefox zsh dolphin nitrogen compton breeze-icon-theme lxinput neovim terminator xorg
+sudo apt-get install awesome neofetch konsole firefox zsh dolphin nitrogen compton breeze-icon-theme lxinput neovim terminator xorg LightDM
 
 chsh -s /bin/zsh
 
