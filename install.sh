@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade
 
 # Install packages and dependencies
-sudo apt-get install -y awesome terminator build-essential libpam0g-dev libxcb-xkb-dev zsh xorg
+sudo apt-get install -y awesome terminator build-essential libpam0g-dev libxcb-xkb-dev zsh xorg compton nitrogen
 
 # Download ly display manager
 git clone https://github.com/fairyglade/ly --recurse-submodules
